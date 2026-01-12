@@ -58,9 +58,18 @@ export class SavingProductCurrencyStepComponent implements OnInit {
       ],
       digitsAfterDecimal: [
         '',
-        Validators.required
+        [
+          Validators.required,
+          Validators.min(0)
+        ]
       ],
-      inMultiplesOf: ['']
+      inMultiplesOf: [
+        '',
+        [
+          Validators.required,
+          Validators.min(1)
+        ]
+      ]
     });
   }
 
