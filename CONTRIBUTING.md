@@ -70,6 +70,25 @@ We follow a strict branching model to keep our history clean.
   - **Format:** `WEB-<ID>-<short-description>`
   - **Example:** `git checkout -b WEB-123-fix-login-button`
 
+### Reserved Branch Names and Tags
+
+The following branch names and tags (and derivatives and extensions e.g., `releasev1.0`) are reserved for use by Mifos Organisation. Any branches created by non-admins with these names will be deleted without notice:
+
+- `main`
+- `master`
+- `dev`
+- `development`
+- `sec`
+- `security`
+- `mifos`
+- `release`
+- `rel`
+- `rc`
+- `staging`
+- `prod`
+- `production`
+- `gsoc`
+
 ---
 
 ## Step 4: UI/UX Consistency
