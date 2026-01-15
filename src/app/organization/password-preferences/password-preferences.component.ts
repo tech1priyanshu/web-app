@@ -82,6 +82,31 @@ export class PasswordPreferencesComponent implements OnInit {
   }
 
   /**
+   * TrackBy function for ngFor optimization.
+   * @param index Index of the item.
+   * @param item Password preference item.
+   * @returns Unique identifier for the item.
+   */
+  trackByPasswordPreference(index: number, item: any): any {
+    return item.id || index;
+  }
+
+  /**
+   * Gets the password preference label based on ID.
+   * @param preference Password preference object.
+   * @returns Translation key for the password preference label.
+   */
+  getPasswordLabel(preference: any): string {
+    // Map based on ID to ensure robustness
+    const labelMap: { [key: number]: string } = {
+      1: 'labels.inputs.Basic',
+      2: 'labels.inputs.Standard',
+      3: 'labels.inputs.Strong'
+    };
+    return labelMap[preference.id] || 'labels.inputs.Unknown';
+  }
+
+  /**
    * Submits the password preferences form and updates password preferences,
    * if successful redirects to organization view.
    */
