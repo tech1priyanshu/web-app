@@ -115,6 +115,11 @@ export class LoansAccountButtonConfiguration {
       case 'Overpaid':
         this.buttonsArray = [
           {
+            name: 'Add Loan Charge',
+            icon: 'plus',
+            taskPermissionName: 'CREATE_LOANCHARGE'
+          },
+          {
             name: 'Transfer Funds',
             icon: 'exchange',
             taskPermissionName: 'CREATE_ACCOUNTTRANSFER'
