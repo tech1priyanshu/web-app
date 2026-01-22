@@ -63,11 +63,17 @@ export class ShareProductCurrencyStepComponent implements OnInit {
       ],
       digitsAfterDecimal: [
         '',
-        Validators.required
+        [
+          Validators.required,
+          Validators.min(0)
+        ]
       ],
       inMultiplesOf: [
         '',
-        Validators.required
+        [
+          Validators.required,
+          Validators.min(1)
+        ]
       ]
     });
   }

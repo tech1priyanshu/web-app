@@ -31,6 +31,7 @@
       <mat-label>{{ 'labels.inputs.Decimal Places' | translate }}</mat-label>
       <input
         type="number"
+        min="0"
         matTooltip="{{ 'tooltips.Track and report on share accounts' | translate }}"
         matInput
         formControlName="digitsAfterDecimal"
@@ -46,6 +47,7 @@
       <mat-label>{{ 'labels.inputs.Currency in multiples of' | translate }}</mat-label>
       <input
         type="number"
+        min="1"
         matInput
         matTooltip="{{ 'tooltips.Amount to be rounded off' | translate }}"
         formControlName="inMultiplesOf"
